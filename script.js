@@ -4,34 +4,16 @@
  * Based on content from: FINE CANE WORKS.docx
  */
 
-// Wait for Forminit SDK to load (it's loaded via script tag in HTML)
-function waitForForminit(callback, maxRetries = 10, retryInterval = 100) {
-    let retries = 0;
-    const check = () => {
-        if (typeof forminit !== 'undefined' && forminit.submit) {
-            callback();
-        } else if (retries < maxRetries) {
-            retries++;
-            setTimeout(check, retryInterval);
-        } else {
-            console.error('Forminit SDK failed to load after', maxRetries, 'retries');
-        }
-    };
-    check();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     initMobileNavigation();
     initSmoothScrolling();
+    initFormValidation();
     initProductButtons();
     updateCurrentYear();
 
     // Lazy load images for performance
     initLazyLoading();
-
-    // Initialize form validation after Forminit SDK is loaded
-    waitForForminit(initFormValidation, 15, 200);
 });
 
 /**
@@ -247,7 +229,7 @@ function validateForm(form) {
 }
 
 /**
- * Handle form submission using Forminit
+ * Handle form submission using Formsubmit.com
  */
 let isSubmitting = false;
 
@@ -268,54 +250,24 @@ async function handleSubmit(form) {
     successMessage.classList.remove('error', 'show');
 
     try {
-        // Build FormData
-        const fd = new FormData(form);
+        // For Formsubmit.com - just submit the form normally after validation
+        // Formsubmit handles the redirection automatically
+        form.submit();
 
-        // Map field names to Forminit format
-        const fieldMappings = {
-            'name': 'fi-sender-fullName',
-            'email': 'fi-sender-email',
-            'phone': 'fi-sender-phone',
-            'message': 'fi-text-message'
-        };
+        // Show success message
+        successMessage.textContent = 'Thank you! Your message has been sent successfully. We will contact you soon.';
+        successMessage.style.color = '#10b981';
 
-        // Create new FormData with mapped field names
-        const mappedFd = new FormData();
-        for (const [key, value] of fd.entries()) {
-            if (value && value.toString().trim() !== '') {
-                const forminitName = fieldMappings[key] || `fi-text-${key}`;
-                mappedFd.append(forminitName, value);
-            }
-        }
+        // Reset form
+        form.reset();
 
-        // Add sender email (required by Forminit)
-        mappedFd.append('fi-sender-email', fd.get('email') || fd.get('name') || 'anon@example.com');
-
-        // Submit to Forminit
-        const { data, error } = await forminit.submit('nj6oxos4t5q', mappedFd);
-
-        if (!error && data) {
-            // Success - show message and reset form
-            successMessage.textContent = 'Thank you! Your message has been sent successfully. We will contact you soon.';
-            successMessage.style.display = 'block';
-            successMessage.style.color = '#10b981';
-            successMessage.classList.remove('error');
-
-            errorMessage.style.display = 'none';
-            errorMessage.classList.remove('show');
-
-            form.reset();
-
-            // Reset after 5 seconds
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-        } else {
-            throw new Error(error?.message || ('data: ' + JSON.stringify(data)));
-        }
+        // Reset after 5 seconds
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
 
     } catch (error) {
-        console.error('Forminit error:', error);
+        console.error('Form submission error:', error);
 
         // Show error message
         errorMessage.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
