@@ -276,21 +276,24 @@ async function handleSubmit(form) {
         // Submit to Forminit
         const { data, error } = await forminit.submit('nj6oxos4t5q', mappedFd);
 
-        if (!error && data && typeof data.hashId === 'string') {
+        if (!error && data) {
             // Success - show message and reset form
             successMessage.textContent = 'Thank you! Your message has been sent successfully. We will contact you soon.';
-            successMessage.classList.add('show');
             successMessage.style.display = 'block';
             successMessage.style.color = '#10b981';
+            successMessage.classList.remove('error');
+
+            errorMessage.style.display = 'none';
+            errorMessage.classList.remove('show');
 
             form.reset();
 
             // Reset after 5 seconds
             setTimeout(() => {
-                successMessage.classList.remove('show');
+                successMessage.style.display = 'none';
             }, 5000);
         } else {
-            throw new Error(error?.message || 'Submission failed');
+            throw new Error(error?.message || ('data: ' + JSON.stringify(data)));
         }
 
     } catch (error) {
