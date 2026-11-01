@@ -4,16 +4,34 @@
  * Based on content from: FINE CANE WORKS.docx
  */
 
+// Wait for Forminit SDK to load (it's loaded via script tag in HTML)
+function waitForForminit(callback, maxRetries = 10, retryInterval = 100) {
+    let retries = 0;
+    const check = () => {
+        if (typeof forminit !== 'undefined' && forminit.submit) {
+            callback();
+        } else if (retries < maxRetries) {
+            retries++;
+            setTimeout(check, retryInterval);
+        } else {
+            console.error('Forminit SDK failed to load after', maxRetries, 'retries');
+        }
+    };
+    check();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     initMobileNavigation();
     initSmoothScrolling();
-    initFormValidation();
     initProductButtons();
     updateCurrentYear();
 
     // Lazy load images for performance
     initLazyLoading();
+
+    // Initialize form validation after Forminit SDK is loaded
+    waitForForminit(initFormValidation, 15, 200);
 });
 
 /**
