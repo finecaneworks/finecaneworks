@@ -84,7 +84,7 @@ Based on the Word document content:
 - Location: Parempadam, Thrissur, Kerala
 - Phone: [Your Phone Number]
 - WhatsApp: [Your WhatsApp Number]
-- Email: finecaneworks@gmail.com
+- Email: finecaneworks.n@gmail.com
 
 **Services Available**
 - Delivery across Thrissur and beyond
