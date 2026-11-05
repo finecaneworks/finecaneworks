@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%238B5A2B'%3E%3Ctext y='0.8em' font-size='90'%3E%E2%9C%82%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,7 +25,7 @@
     <!-- Header / Navigation -->
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo" aria-label="Fine Cane Works home">
+            <a href="index.html" class="logo" aria-label="Fine Cane Works home">
                 <span class="logo-icon" aria-hidden="true">✂</span>
                 <span class="logo-text">Fine Cane Works</span>
             </a>
@@ -44,6 +44,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            <a href="#contact" class="header-cta">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
     </header>
 
@@ -54,13 +55,47 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Handcrafted &amp; Timeless Craftsmanship</h1>
-                    <p class="hero-subtitle">For over 15 years, Fine Cane Works has been bringing the beauty and versatility of cane craftsmanship into homes and living spaces across Thrissur.</p>
+                    <p class="hero-eyebrow"><span aria-hidden="true"></span> MADE BY HAND IN PAREMPADAM, KERALA</p>
+                    <h1 class="hero-title">A little more <em>nature</em> in the way you live.</h1>
+                    <p class="hero-subtitle">Thoughtful cane furniture and home pieces, shaped by hand and made to feel at home in yours.</p>
                     <div class="hero-cta">
-                        <a href="#products" class="btn btn-primary">View Our Collection</a>
-                        <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                        <a href="#products" class="btn btn-primary">Explore the collection <span aria-hidden="true">→</span></a>
+                        <a href="#about" class="hero-text-link">The story behind the craft <span aria-hidden="true">↓</span></a>
                     </div>
+                    <p class="hero-footnote"><span aria-hidden="true">✳</span> Cane craft, made with care for over 15 years</p>
                 </div>
+                <div class="hero-art" aria-hidden="true">
+                    <span class="hero-art-ring"></span>
+                    <svg class="hero-chair" viewBox="0 0 480 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="cane-weave" width="12" height="12" patternUnits="userSpaceOnUse">
+                                <path d="M0 3H12M0 9H12M3 0V12M9 0V12" stroke="#75543A" stroke-opacity=".35" stroke-width="1.5"/>
+                            </pattern>
+                        </defs>
+                        <circle cx="242" cy="247" r="209" fill="#E8D8BD"/>
+                        <circle cx="242" cy="247" r="185" fill="#F0E7D7"/>
+                        <path d="M135 111C140 90 153 77 176 77H302C325 77 338 92 340 115L360 287H326L307 123H173L155 287H121L135 111Z" fill="#A77B51"/>
+                        <path d="M166 135H314L331 269H151L166 135Z" fill="url(#cane-weave)" stroke="#65452F" stroke-width="8" stroke-linejoin="round"/>
+                        <path d="M141 279H343L368 312H116L141 279Z" fill="#BD956A" stroke="#65452F" stroke-width="8" stroke-linejoin="round"/>
+                        <path d="M141 310L126 403M343 310L360 403M184 310L194 403M300 310L288 403" stroke="#65452F" stroke-width="12" stroke-linecap="round"/>
+                        <path d="M126 403H193M289 403H360" stroke="#65452F" stroke-width="11" stroke-linecap="round"/>
+                        <path d="M162 286L137 190M322 286L345 190" stroke="#D3B48D" stroke-width="5" stroke-linecap="round"/>
+                        <path d="M84 414H394" stroke="#8D6A4D" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="hero-art-caption"><span>01</span> Woven slowly. Made to last.</span>
+                    <span class="hero-spark hero-spark-one">✳</span>
+                    <span class="hero-spark hero-spark-two">✳</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="proof-strip" aria-label="Fine Cane Works at a glance">
+            <div class="container proof-strip-inner">
+                <p><span class="proof-number">15<span>+</span></span><span class="proof-label">years of cane craft</span></p>
+                <span class="proof-divider" aria-hidden="true"></span>
+                <p><span class="proof-mark" aria-hidden="true">✳</span><span class="proof-label">Made by hand in Kerala</span></p>
+                <span class="proof-divider" aria-hidden="true"></span>
+                <p><span class="proof-mark" aria-hidden="true">↗</span><span class="proof-label">Custom pieces &amp; restoration</span></p>
             </div>
         </section>
 
@@ -68,46 +103,51 @@
         <section id="about" class="about">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title">About Fine Cane Works</h2>
-                    <p class="section-subtitle">Over 15 Years of Craftsmanship</p>
+                    <p class="section-kicker">A LOCAL WORKSHOP, A LASTING CRAFT</p>
+                    <h2 class="section-title">Made with patience.<br>Meant to be lived with.</h2>
+                    <p class="section-subtitle">Over 15 years of bringing the natural warmth of cane into everyday spaces.</p>
                 </header>
 
                 <div class="about-grid">
                     <div class="about-text">
                         <p class="lead">
-                            Located in the heart of Parempadam, Kerala, Fine Cane Works is a one-craftsman workshop creating beautiful, handwoven cane furniture with traditional techniques passed down through generations.
+                            In Parempadam, Kerala, Fine Cane Works is a small workshop where cane is shaped and woven into useful, beautiful pieces for the home.
                         </p>
 
                         <p>
-                            For more than 15 years, we have been creating and supplying cane furniture and home accessories for customers looking for products that are practical, distinctive and beautifully crafted.
+                            For over 15 years, we have worked with this versatile natural material—creating furniture and home accessories with care for the details, the finish and the way each piece will be used.
                         </p>
 
                         <p>
-                            Our in-house cane craftsmen bring years of experience to every piece, from shaping and weaving cane to the finishing touches. This allows us to maintain close attention to the quality and workmanship of our products.
-                        </p>
-
-                        <p>
-                            Whether you are looking for a functional piece of furniture, a distinctive addition to your home, a custom-made design, or a traditional cane piece that needs to be restored/polished, we are here to help.
+                            From a chair for a quiet corner to a custom piece made for your space, every project starts with a conversation. We also help repair and polish much-loved cane furniture.
                         </p>
 
                         <div class="features-grid">
                             <div class="feature-item">
-                                <span class="feature-icon">🎨</span>
+                                <span class="feature-icon" aria-hidden="true">✳</span>
                                 <h4>Custom Orders</h4>
-                                <p>Work with us on specific dimensions or designs</p>
+                                <p>Made around your space and idea</p>
                             </div>
                             <div class="feature-item">
-                                <span class="feature-icon">🔧</span>
+                                <span class="feature-icon" aria-hidden="true">↻</span>
                                 <h4>Repair &amp; Restoration</h4>
-                                <p>Bring old pieces back to life</p>
+                                <p>Care for the pieces you already love</p>
                             </div>
                             <div class="feature-item">
-                                <span class="feature-icon">🚚</span>
+                                <span class="feature-icon" aria-hidden="true">→</span>
                                 <h4>Delivery Available</h4>
-                                <p>We deliver across Thrissur and beyond</p>
+                                <p>Ask us about delivery in your area</p>
                             </div>
                         </div>
                     </div>
+                    <aside class="about-aside">
+                        <span class="about-aside-mark" aria-hidden="true">FCW</span>
+                        <p class="about-aside-kicker">ROOTED IN PAREMPADAM</p>
+                        <h3>Good things take the time they take.</h3>
+                        <p>Natural cane has its own character. We let the material—and the hands that shape it—lead the way.</p>
+                        <a href="#craft" class="about-aside-link">A closer look at our craft <span aria-hidden="true">→</span></a>
+                        <span class="about-aside-decoration" aria-hidden="true"></span>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -116,8 +156,9 @@
         <section id="craft" class="craft">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title">Our Craft</h2>
-                    <p class="section-subtitle">Where Traditional Skill Meets Everyday Design</p>
+                    <p class="section-kicker">THE BEAUTY IS IN THE DETAILS</p>
+                    <h2 class="section-title">A natural material.<br>A human touch.</h2>
+                    <p class="section-subtitle">Every piece begins with cane, careful hands and an idea worth making.</p>
                 </header>
 
                 <div class="craft-content">
@@ -145,6 +186,13 @@
                             Every handcrafted piece has its own character, and the small variations that come with handmade work are part of what makes cane furniture special.
                         </p>
                     </div>
+                    <aside class="craft-highlight">
+                        <div class="craft-highlight-pattern" aria-hidden="true"></div>
+                        <span class="craft-highlight-index">THE MAKING</span>
+                        <p class="craft-highlight-quote">Every piece has its own character, shaped with care at each step.</p>
+                        <span class="craft-highlight-rule" aria-hidden="true"></span>
+                        <p class="craft-highlight-caption">Shaped and woven at our workshop in Parempadam</p>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -153,17 +201,22 @@
         <section id="products" class="products">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title">Our Products</h2>
-                    <p class="section-subtitle">Furniture for Everyday Living</p>
-                </div>
-
-                <p class="products-intro">From simple everyday pieces to distinctive furniture for your living spaces, our cane furniture brings a natural and timeless character to your home.</p>
+                    <p class="section-kicker">MADE FOR YOUR EVERYDAY</p>
+                    <h2 class="section-title">A piece for every corner.</h2>
+                    <p class="section-subtitle">Explore our cane furniture, home accents and gifting pieces. Have a particular idea? <a href="#contact" class="inline-link">Let’s make it together.</a></p>
+                </header>
 
                 <div class="product-grid">
                     <!-- Chairs Product -->
                     <article class="product-card">
-                        <div class="product-image">
-                            <div class="product-placeholder">Chair</div>
+                        <div class="product-image product-art-chair">
+                            <span class="product-number">01</span>
+                            <svg class="product-illustration" viewBox="0 0 180 150" fill="none" aria-hidden="true">
+                                <path d="M52 27c0-9 5-15 14-15h48c9 0 14 6 14 15l9 54h-20l-8-43H72l-8 43H44l8-54Z" fill="currentColor" opacity=".22" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M70 39h40l7 34H63l7-34Z" stroke="currentColor" stroke-width="4"/>
+                                <path d="M46 81h88l11 15H35l11-15ZM48 96l-7 37m88-37 8 37M69 96l2 37m37-37-2 37" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M73 45v22m11-22v22m11-22v22m11-22v22M66 51h47m-49 10h51" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
+                            </svg>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Chairs</h3>
@@ -176,14 +229,21 @@
                                 <li>Dining chairs</li>
                                 <li>Bamboo-cane hybrid chairs</li>
                             </ul>
-                            <button class="btn btn-outline" data-product="chair">Inquire About This</button>
+                            <button class="btn btn-outline" data-product="chairs">Ask about chairs <span aria-hidden="true">→</span></button>
                         </div>
                     </article>
 
                     <!-- Swings Product -->
                     <article class="product-card">
-                        <div class="product-image">
-                            <div class="product-placeholder">Swing</div>
+                        <div class="product-image product-art-swing">
+                            <span class="product-number">02</span>
+                            <svg class="product-illustration" viewBox="0 0 180 150" fill="none" aria-hidden="true">
+                                <path d="M58 14v21m64-21v21" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M57 35h66l-8 41H65l-8-41Z" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M64 46h52M66 57h48M68 68h44M72 39l8 34m14-34v34m14-34-8 34" stroke="currentColor" stroke-width="1.8" opacity=".65"/>
+                                <path d="M65 76c4 11 12 17 25 17s21-6 25-17m-53-41 8 41m58-41-8 41" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M47 111h86" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".25"/>
+                            </svg>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Swings</h3>
@@ -196,14 +256,20 @@
                                 <li>Custom sizes available</li>
                                 <li>Classic verandah style</li>
                             </ul>
-                            <button class="btn btn-outline" data-product="swing">Inquire About This</button>
+                            <button class="btn btn-outline" data-product="swing">Ask about swings <span aria-hidden="true">→</span></button>
                         </div>
                     </article>
 
                     <!-- Tables Product -->
                     <article class="product-card">
-                        <div class="product-image">
-                            <div class="product-placeholder">Tables</div>
+                        <div class="product-image product-art-table">
+                            <span class="product-number">03</span>
+                            <svg class="product-illustration" viewBox="0 0 180 150" fill="none" aria-hidden="true">
+                                <path d="M39 54h102v13H39z" fill="currentColor" opacity=".25" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M48 68h84l-8 12H56l-8-12Z" stroke="currentColor" stroke-width="3"/>
+                                <path d="m60 81-6 48m72-48 6 48m-72-48 8 48m50-48-8 48" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                                <path d="M47 58h86m-75 0v7m14-7v7m14-7v7m14-7v7m14-7v7" stroke="currentColor" stroke-width="1.5" opacity=".55"/>
+                            </svg>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Tables &amp; Teapoys</h3>
@@ -216,14 +282,21 @@
                                 <li>Coffee tables</li>
                                 <li>Console tables</li>
                             </ul>
-                            <button class="btn btn-outline" data-product="table">Inquire About This</button>
+                            <button class="btn btn-outline" data-product="table">Ask about tables <span aria-hidden="true">→</span></button>
                         </div>
                     </article>
 
                     <!-- Home Décor Product -->
                     <article class="product-card">
-                        <div class="product-image">
-                            <div class="product-placeholder">Décor</div>
+                        <div class="product-image product-art-decor">
+                            <span class="product-number">04</span>
+                            <svg class="product-illustration" viewBox="0 0 180 150" fill="none" aria-hidden="true">
+                                <path d="M90 18v12m-32 19 10 8m44-8-10 8M90 82V66m-32 41 13-7m38 7-13-7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M90 31c18 13 27 27 27 42v4H63v-4c0-15 9-29 27-42Z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M63 77h54v12H63z" fill="currentColor" opacity=".3" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="m71 90 5 35m33-35-5 35m-24-35 3 35m23-35-3 35M61 127h58" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M75 77c5-13 9-22 15-30m15 30c-5-13-9-22-15-30M70 83h40" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+                            </svg>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Home Décor</h3>
@@ -236,14 +309,20 @@
                                 <li>Decorative Wall Pieces</li>
                                 <li>Cane Accessories</li>
                             </ul>
-                            <button class="btn btn-outline" data-product="decor">Inquire About This</button>
+                            <button class="btn btn-outline" data-product="decor">Ask about décor <span aria-hidden="true">→</span></button>
                         </div>
                     </article>
 
                     <!-- Baskets Product -->
                     <article class="product-card">
-                        <div class="product-image">
-                            <div class="product-placeholder">Baskets</div>
+                        <div class="product-image product-art-basket">
+                            <span class="product-number">05</span>
+                            <svg class="product-illustration" viewBox="0 0 180 150" fill="none" aria-hidden="true">
+                                <path d="M52 61h76l-8 68H60l-8-68Z" fill="currentColor" opacity=".2" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+                                <path d="M69 61c0-17 8-27 21-27s21 10 21 27" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                                <path d="M58 74h64m-65 14h62m-64 14h60m-61 14h58m-43-52v62m16-62v62m16-62-3 62" stroke="currentColor" stroke-width="2" opacity=".65"/>
+                                <path d="M56 61h68" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
                         </div>
                         <div class="product-info">
                             <h3 class="product-name">Cane Baskets &amp; Hampers</h3>
@@ -256,7 +335,7 @@
                                 <li>Corporate gifts</li>
                                 <li>Personal gifting</li>
                             </ul>
-                            <button class="btn btn-outline" data-product="basket">Inquire About This</button>
+                            <button class="btn btn-outline" data-product="basket">Ask about baskets <span aria-hidden="true">→</span></button>
                         </div>
                     </article>
                 </div>
@@ -267,18 +346,20 @@
         <section id="contact" class="contact">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="section-subtitle">Let's Talk About Your Requirement</p>
+                    <p class="section-kicker">WE’D LOVE TO HEAR FROM YOU</p>
+                    <h2 class="section-title">Have something in mind?</h2>
+                    <p class="section-subtitle">Tell us what you’re looking for. We’ll take it from there.</p>
                 </header>
 
                 <div class="contact-content">
                     <div class="contact-info">
                         <address class="contact-address">
-                            <h3 class="contact-heading">Fine Cane Works</h3>
-                            <p class="contact-detail">📍 Parempadam, Thrissur, Kerala</p>
-                            <p class="contact-detail">📞 <a href="tel:+919048922075" class="contact-link">+91 9048922075</a></p>
-                            <p class="contact-detail">📧 <a href="mailto:finecaneworks.n@gmail.com" class="contact-link">finecaneworks.n@gmail.com</a></p>
-                            <p class="contact-note">Delivery Available | Custom Orders Accepted | Repair &amp; Polishing Services</p>
+                            <p class="contact-kicker">COME SAY HELLO</p>
+                            <h3 class="contact-heading">Let’s make room for something natural.</h3>
+                            <p class="contact-detail"><span class="contact-detail-label">VISIT</span><span>Parempadam, Thrissur, Kerala</span></p>
+                            <p class="contact-detail"><span class="contact-detail-label">CALL</span><a href="tel:+919048922075" class="contact-link">+91 9048922075</a></p>
+                            <p class="contact-detail"><span class="contact-detail-label">EMAIL</span><a href="mailto:finecaneworks.n@gmail.com" class="contact-link">finecaneworks.n@gmail.com</a></p>
+                            <p class="contact-note">Custom orders, repairs, polishing and delivery enquiries are all welcome.</p>
                         </address>
 
                         <div class="contact-actions">
@@ -290,6 +371,10 @@
                     <div class="contact-form-container">
                         <form id="contact-form" class="contact-form" novalidate method="POST" action="https://formsubmit.co/finecaneworks.n@gmail.com">
                             <!-- Formsubmit.com form - free, no adblock issues -->
+                            <div class="contact-form-intro">
+                                <h3>Send us a note</h3>
+                                <p>Share a few details and we’ll get back to you.</p>
+                            </div>
                             <div class="form-group">
                                 <label for="name" class="form-label">Your Name <span class="required">*</span></label>
                                 <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required aria-required="true" minlength="2">
@@ -306,6 +391,7 @@
                                 <label for="phone" class="form-label">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number" autocomplete="tel">
                                 <span class="error-message" id="phone-error" aria-live="polite"></span>
+                                <p class="help-text contact-help">Please include an email address or phone number so we can reply.</p>
                             </div>
 
                             <div class="form-group">
@@ -314,7 +400,7 @@
                                 <span class="error-message" id="message-error" aria-live="polite"></span>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-block">Send your message <span aria-hidden="true">→</span></button>
                             <div class="form-success" id="form-success" role="alert" aria-live="polite"></div>
                             <div class="form-error" id="form-error" role="alert" aria-live="polite"></div>
                         </form>
@@ -347,7 +433,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; <span id="current-year">2024</span> Fine Cane Works. All Rights Reserved.</p>
+                <p class="footer-copyright">&copy; <span id="current-year">2026</span> Fine Cane Works. All Rights Reserved.</p>
                 <p class="footer-location">Parempadam, Thrissur, Kerala</p>
             </div>
         </div>

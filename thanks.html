@@ -3,102 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5;url=index.html">
-    <title>Thank You - Fine Cane Works</title>
+    <meta name="description" content="Thank you for contacting Fine Cane Works. We look forward to helping with your cane furniture enquiry.">
+    <meta name="theme-color" content="#f8f5f0">
+    <title>Thank You | Fine Cane Works</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .thank-you-page {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: var(--color-white);
-            padding: var(--spacing-xxxl);
-        }
-        .thank-you-icon {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-lg);
-        }
-        .thank-you-title {
-            font-size: var(--font-size-xxxl);
-            color: var(--color-primary);
-            margin-bottom: var(--spacing-lg);
-        }
-        .thank-you-message {
-            font-size: var(--font-size-lg);
-            color: var(--color-text-medium);
-            max-width: 600px;
-            margin-bottom: var(--spacing-xl);
-        }
-        .thank-you-btn {
-            padding: var(--spacing-md) var(--spacing-xxl);
-            font-size: var(--font-size-base);
-            font-weight: 600;
-            border-radius: var(--border-radius-sm);
-            cursor: pointer;
-            transition: transform var(--transition-speed) var(--transition-easing);
-        }
-        .thank-you-btn:hover { transform: translateY(-2px); }
-        .auto-redirect {
-            font-size: var(--font-size-sm);
-            color: var(--color-text-medium);
-            margin-top: var(--spacing-lg);
-        }
-    </style>
-    <style>
-        .thank-you-page {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: var(--color-white);
-            padding: var(--spacing-xxxl);
-        }
-        .thank-you-icon {
-            font-size: 4rem;
-            margin-bottom: var(--spacing-lg);
-        }
-        .thank-you-title {
-            font-size: var(--font-size-xxxl);
-            color: var(--color-primary);
-            margin-bottom: var(--spacing-lg);
-        }
-        .thank-you-message {
-            font-size: var(--font-size-lg);
-            color: var(--color-text-medium);
-            max-width: 600px;
-            margin-bottom: var(--spacing-xl);
-        }
-        .thank-you-btn {
-            padding: var(--spacing-md) var(--spacing-xxl);
-            font-size: var(--font-size-base);
-            font-weight: 600;
-            border-radius: var(--border-radius-sm);
-            cursor: pointer;
-            transition: transform var(--transition-speed) var(--transition-easing);
-        }
-        .thank-you-btn:hover { transform: translateY(-2px); }
-    </style>
 </head>
-<body>
-    <a href="index.html" class="skip-link">Skip to main content</a>
+<body class="thank-you-body">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <main>
-        <div class="thank-you-page">
-            <div class="thank-you-icon">✂</div>
-            <h1 class="thank-you-title">Thank You for Your Message!</h1>
-            <p class="thank-you-message">
-                Your inquiry has been sent successfully. We will contact you shortly regarding your request for Fine Cane Works products.
-            </p>
-            <a href="index.html" class="btn btn-primary thank-you-btn">Return to Homepage</a>
-            <p class="auto-redirect">Redirecting back to homepage in 5 seconds...</p>
+    <header class="site-header thank-you-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="Fine Cane Works home">
+                <span class="logo-icon" aria-hidden="true">✂</span>
+                <span class="logo-text">Fine Cane Works</span>
+            </a>
+            <span class="thank-you-location">Parempadam, Thrissur</span>
         </div>
+    </header>
+
+    <main id="main-content" class="thank-you-main">
+        <section class="thank-you-page" aria-labelledby="thank-you-title">
+            <div class="thank-you-card">
+                <div class="thank-you-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                        <circle cx="32" cy="32" r="30"></circle>
+                        <path d="m19 32 9 9 18-19"></path>
+                    </svg>
+                </div>
+                <p class="thank-you-eyebrow">MESSAGE RECEIVED</p>
+                <h1 class="thank-you-title" id="thank-you-title">Thank you for reaching out.</h1>
+                <p class="thank-you-message">
+                    Your message has been sent to Fine Cane Works. We appreciate your interest and will be in touch soon to talk through your enquiry.
+                </p>
+                <div class="thank-you-divider" aria-hidden="true"><span></span></div>
+                <p class="thank-you-note">In the meantime, take a look at the pieces we make by hand in Parempadam.</p>
+                <div class="thank-you-actions">
+                    <a href="index.html#products" class="btn btn-primary thank-you-btn">Explore our collection</a>
+                    <a href="index.html" class="thank-you-home-link">Back to home <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <p class="thank-you-signoff">Handcrafted cane. Timeless craftsmanship.</p>
+        </section>
     </main>
+
+    <footer class="thank-you-footer">
+        <p>&copy; <span id="current-year">2026</span> Fine Cane Works <span aria-hidden="true">·</span> Parempadam, Thrissur, Kerala</p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
